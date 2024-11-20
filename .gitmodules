@@ -1,3 +1,6 @@
 [submodule "3rdParty/whisper.cpp"]
 	path = 3rdParty/whisper.cpp
 	url = git@github.com:ggerganov/llama.cpp.git
+[submodule "3rdParty/llama.cpp"]
+	path = 3rdParty/llama.cpp
+	url = git@github.com:ggerganov/llama.cpp.git

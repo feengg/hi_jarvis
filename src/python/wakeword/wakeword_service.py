@@ -3,6 +3,7 @@ from openwakeword.model import Model
 import numpy as np
 from config import OPEN_WAKE_WORD_MODEL_NAME_LIST, OPEN_WAKE_WORD_MODEL_THREAD_HOLD
 from threading import Thread
+import logging
 
 class WakeWordService():
     def __init__(self) -> None:
@@ -14,6 +15,7 @@ class WakeWordService():
         self.running = False
 
     def __do_start(self):
+        logging.debug("start running wake word service...")
         self.stream = self.audio.open(
             format=pyaudio.paInt16,
             channels=1,
@@ -36,6 +38,7 @@ class WakeWordService():
         self.running = False
         self.stream.stop_stream()
         self.stream.close()
+        logging.debug(f"exit running wake word service with return {hit}")
         return hit
 
     def start(self):

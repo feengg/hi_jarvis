@@ -1,3 +1,6 @@
+# Log file path
+LOG_FILE_PATH = ""
+
 # Wake word service
 OPEN_WAKE_WORD_MODEL_PATH = ""
 
